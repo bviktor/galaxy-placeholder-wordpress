@@ -11,8 +11,11 @@ N/A
 ## Examples
 
 ```
-sed -i.bak 's/bviktor\./noobient\./g' requirements.yml
-sed -i.bak 's/bviktor\./noobient\./g' meta/requirements.yml
+# requirements
+sed -i 's/bviktor\./noobient\./g' requirements.yml
+sed -i 's/bviktor\./noobient\./g' meta/requirements.yml
+# include_role's
+find . -type f -not -path '*/\.*' -exec sed -i 's/name: bviktor\./name: noobient\./g' {} +
 ```
 
 ## Return Values
